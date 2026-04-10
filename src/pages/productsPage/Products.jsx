@@ -1,11 +1,14 @@
 import ProductCard from "./ProductCard";
 import { supabase } from "../../lib/supabase";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetchProducts();
@@ -48,7 +51,7 @@ export default function Products() {
         <div className="flex justify-center mt-6 mb-10">
           <input
             type="text"
-            placeholder="Search products..."
+            placeholder={t("searchProducts")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full md:w-1/2 px-4 py-3 rounded-full border border-gray-700 bg-black text-white focus:outline-none focus:border-red-600 transition"

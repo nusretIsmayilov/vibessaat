@@ -2,15 +2,18 @@ import { useState } from "react";
 import { Button, Burger, Drawer, ScrollArea } from "@mantine/core";
 import { NavLink } from "react-router-dom";
 import LanguageSwitcher from "../components/LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const [opened, setOpened] = useState(false);
 
+  const { t } = useTranslation();
+
   const navLinks = [
-    { label: "Home", path: "/home" },
-    { label: "Products", path: "/products" },
-    { label: "Contact Us", path: "/contact" },
-    { label: "About", path: "/about" },
+    { label: t("home"), path: "/home" },
+    { label: t("products"), path: "/products" },
+    { label: t("contactUs"), path: "/contact" },
+    // { label: t("about"), path: "/about" },
   ];
 
   return (
