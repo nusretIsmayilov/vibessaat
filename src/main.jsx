@@ -1,31 +1,33 @@
-import './i18n.js';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
-import './index.css';
-import { MantineProvider } from '@mantine/core';
-import '@mantine/core/styles.css';
-import '@mantine/notifications/styles.css';
-import { IconCheck } from '@tabler/icons-react';
-import './i18n.js'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
 
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import "@mantine/core/styles.css";
+import "@mantine/notifications/styles.css";
+
+import { MantineProvider } from "@mantine/core";
+import { IconCheck } from "@tabler/icons-react";
+import "./i18n.js";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <MantineProvider defaultColorScheme="light"
-    theme={{
-      components: {
-        Checkbox: {
-          defaultProps: {
-            icon: IconCheck,
+  <React.StrictMode>
+    <MantineProvider
+      defaultColorScheme="light"
+      theme={{
+        components: {
+          Checkbox: {
+            defaultProps: {
+              icon: IconCheck,
+            },
           },
         },
-      },
-    }}>
-  <React.StrictMode>
-    <App />
+      }}
+    >
+      <App />
+    </MantineProvider>
   </React.StrictMode>
-  </MantineProvider>
 );
-
-
