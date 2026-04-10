@@ -7,7 +7,6 @@ function Admin() {
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
 
-  // Localdeki sabit bilgiler (Gelecekte Supabase'e taşıyacağın kısım)
   const ADMIN_USER = "adminTofiq";
   const ADMIN_PASS = "12345";
 
@@ -23,7 +22,7 @@ function Admin() {
   const [videoFile, setVideoFile] = useState(null);
   const [resetKey, setResetKey] = useState(Date.now());
 
-  // Giriş kontrolü
+  // Log İn control
   const handleLogin = (e) => {
     e.preventDefault();
     if (user === ADMIN_USER && pass === ADMIN_PASS) {
@@ -90,11 +89,13 @@ function Admin() {
     }
   }
 
-  // --- EĞER GİRİŞ YAPILMAMIŞSA LOGIN EKRANINI GÖSTER ---
   if (!isLoggedIn) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-        <form onSubmit={handleLogin} className="bg-white p-8 rounded shadow-md w-full max-w-sm">
+        <form
+          onSubmit={handleLogin}
+          className="bg-white p-8 rounded shadow-md w-full max-w-sm"
+        >
           <h2 className="text-2xl mb-6 text-center font-bold">Admin Girişi</h2>
           <div className="mb-4">
             <label className="block mb-1 text-sm">İstifadəçi Adı</label>
@@ -122,13 +123,12 @@ function Admin() {
     );
   }
 
-  // --- GİRİŞ YAPILMIŞSA ASIL PANELİ GÖSTER ---
   return (
     <div className="bg-white text-black min-h-screen p-6">
       <div className="flex justify-between items-center max-w-md mx-auto mb-6">
         <h1 className="text-3xl font-bold">Admin Panel</h1>
-        <button 
-          onClick={() => setIsLoggedIn(false)} 
+        <button
+          onClick={() => setIsLoggedIn(false)}
           className="text-sm bg-red-100 text-red-600 px-3 py-1 rounded"
         >
           Çıxış
@@ -136,7 +136,6 @@ function Admin() {
       </div>
 
       <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
-        {/* Mevcut inputların (Title, Description, Price vs.) aynen burada devam ediyor */}
         <div>
           <label className="block mb-1">Məhsulun Adı</label>
           <input
@@ -145,7 +144,7 @@ function Admin() {
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
-        
+
         <div>
           <label className="block mb-1">Xüsusiyyətləri</label>
           <input

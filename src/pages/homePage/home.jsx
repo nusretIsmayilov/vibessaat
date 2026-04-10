@@ -46,15 +46,14 @@ const Home = () => {
           <div className="absolute inset-0 bg-black/60 z-10"></div>
           <img
             src={homeHero}
-            alt="Gym Hero"
+            alt="Vibes Saat Hero"
             className="w-full h-full object-cover"
           />
         </div>
 
         <div className="relative z-20 text-center px-4 max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 uppercase italic text-white">
-            {t("stay_on_track")}{" "}
-            <span className="text-red-600">{t("stay_on_diet")}</span>
+            {t("vibes")} <span className="text-red-600">{t("saat")}</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
             {t("home_description")}
@@ -91,7 +90,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {loading ? (
-              <p className="text-white">Loading...</p>
+              <p className="text-white">{t("loading")}</p>
             ) : (
               products
                 .slice(0, 3)

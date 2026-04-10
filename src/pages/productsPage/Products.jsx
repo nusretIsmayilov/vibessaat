@@ -70,14 +70,14 @@ export default function Products() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {loading ? (
-  <p className="text-white">Loading...</p>
-) : filteredProducts.length === 0 ? (
-  <p className="text-gray-400">No products found</p>
-) : (
-  filteredProducts
-    .slice(0, 3)
-    .map((post) => <ProductCard key={post.id} post={post} />)
-)}
+            <p className="text-white">{t("loading")}</p>
+          ) : filteredProducts.length === 0 ? (
+            <p className="text-gray-400">{t("no_products_found")}</p>
+          ) : (
+            filteredProducts
+              .slice(0, 3)
+              .map((post) => <ProductCard key={post.id} post={post} />)
+          )}
         </div>
       </div>
     </div>

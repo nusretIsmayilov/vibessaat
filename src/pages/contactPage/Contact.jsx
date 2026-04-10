@@ -58,7 +58,7 @@ const Contact = () => {
             />
             <div className="absolute inset-0 flex items-center justify-center p-6 text-center bg-black/40">
               <p className="text-sm font-bold uppercase tracking-widest text-white/80">
-                {t("discipline_foundation_everything")}
+                {t("contact_us_text_2")}
               </p>
             </div>
           </div>

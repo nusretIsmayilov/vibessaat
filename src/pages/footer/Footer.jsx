@@ -1,4 +1,4 @@
-import { FaInstagram } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
             href="https://www.tiktok.com/@saat.vibes?_r=1&_t=ZS-95MeDlhvGQq"
             className="text-gray-400 hover:text-white transition-colors"
           >
-            <FaInstagram size={24} />
+            <FaTiktok size={24} />
           </a>
         </div>
         <p className="text-gray-500 text-sm">
