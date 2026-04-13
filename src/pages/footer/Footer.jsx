@@ -8,11 +8,12 @@ export default function Footer() {
           <a
             href="https://www.tiktok.com/@saat.vibes?_r=1&_t=ZS-95MeDlhvGQq"
             className="text-gray-400 hover:text-white transition-colors"
+            target="_blank"
           >
             <FaTiktok size={24} />
           </a>
         </div>
-        <p className="text-gray-500 text-sm">
+        <p className="text-gray-500 text-sm  select-none">
           &copy; 2026 VİBES SAAT. ALL RIGHTS RESERVED.
         </p>
       </footer>

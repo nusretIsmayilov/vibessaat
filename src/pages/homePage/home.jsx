@@ -47,11 +47,11 @@ const Home = () => {
           <img
             src={homeHero}
             alt="Vibes Saat Hero"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover select-none"
           />
         </div>
 
-        <div className="relative z-20 text-center px-4 max-w-4xl">
+        <div className="relative z-20 text-center px-4 max-w-4xl select-none">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 uppercase italic text-white">
             {t("vibes")} <span className="text-red-600">{t("saat")}</span>
           </h1>
