@@ -29,5 +29,5 @@ root.render(
     >
       <App />
     </MantineProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

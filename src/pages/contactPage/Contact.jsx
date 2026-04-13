@@ -19,7 +19,6 @@ const Contact = () => {
 
       <div className="max-w-3xl mx-auto py-10 md:py-20 px-4 md:px-6 flex flex-col items-center justify-center">
         <div className="space-y-8 md:space-y-12 w-full flex flex-col items-center">
-          
           <div className="bg-[#141414] p-6 md:p-10 rounded-3xl border border-gray-800 space-y-8 text-center md:text-left w-full max-w-md">
             <h3 className="text-xl md:text-2xl font-bold uppercase italic tracking-tight text-white">
               {t("contact_information")}
@@ -39,7 +38,7 @@ const Contact = () => {
               <ContactInfoItem
                 icon={<FaTiktok />}
                 label="TikTok"
-                value="saat.vibes"
+                value="@saat.vibes"
               />
             </div>
 
@@ -70,11 +69,11 @@ const Contact = () => {
 };
 
 const ContactInfoItem = ({ icon, label, value }) => (
-  <div className="flex items-center gap-4 md:gap-5 w-full"> {/* w-full eklendi */}
+  <div className="flex items-center gap-4 md:gap-5 w-full">
     <div className="text-red-600 text-lg md:text-xl bg-[#1a1a1a] p-3 rounded-full border border-gray-800 flex-shrink-0">
       {icon}
     </div>
-    <div className="min-w-0 text-left"> {/* text-left burada kritik */}
+    <div className="min-w-0 text-left">
       <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500">
         {label}
       </p>
