@@ -3,7 +3,8 @@ import ProductCard from "../productsPage/ProductCard";
 import { useEffect, useState } from "react";
 import { supabase } from "../../lib/supabase";
 import { Link } from "react-router-dom";
-import homeHero from "../../images/home/homeHero.jpg";
+// import homeHero from "../../images/home/homeHero.jpg";
+import HeroVideo from "../../images/home/HeroVideo.mp4";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
@@ -44,11 +45,20 @@ const Home = () => {
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10"></div>
-          <img
+          {/* <img
             src={homeHero}
             alt="Vibes Saat Hero"
             className="w-full h-full object-cover select-none"
-          />
+          /> */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src={HeroVideo} type="video/mp4" />
+          </video>
         </div>
 
         <div className="relative z-20 text-center px-4 max-w-4xl select-none">
